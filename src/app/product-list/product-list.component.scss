@@ -1,0 +1,31 @@
+
+main {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    place-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    transition: opacity .1s ease;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #aaa;
+    }
+
+    &:active {
+        opacity: .8;
+    }
+}
+
+article img {
+    max-width: 150px;
+}

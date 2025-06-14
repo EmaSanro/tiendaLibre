@@ -1,0 +1,11 @@
+<main>
+    @for (product of productos; track product.title) {
+        <article>
+            <img src="{{product.image}}" alt="{{product.title}}">
+            <hr>
+            <h1>{{product.title}}</h1>
+            <p>{{product.description}}</p>
+            <h3>{{product.price}}</h3>
+        </article>
+    }
+</main>
