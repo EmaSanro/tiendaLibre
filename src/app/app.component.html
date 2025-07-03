@@ -1,14 +1,68 @@
 <header id='header'>
-  <a href="/"><img id='logo' src="/img/Logo.png" alt="Logo"></a>
-  <input id='search' type="text" placeholder='Buscar productos.....'/>
-  <img id='lupa' src="/img/search.png" alt="Search">
-  <nav id='navbar'>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/contacto">Contacto</a></li>
-      <li><a href="/carrito">Carrito</a></li>
-      <li><a href="/loguear">Acceder</a></li>
-    </ul>
-  </nav>
+    <a href="/"><img id='logo' src="/img/Logo.png" alt="Logo"></a>
+    <input id='search' type="text" placeholder='Buscar productos.....'/>
+    <img id='lupa' src="/img/search.png" alt="Search">
+    <nav id='navbar'>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/carrito">Carrito</a></li>
+            <li><a href="/acceder">Acceder</a></li>
+        </ul>
+    </nav>
 </header>
 <app-product-list></app-product-list>
+<footer id='footer'>
+    <div class="section-left">
+        <h2>Gracias por comprar en nuestra pagina 😄</h2>
+        <p>Si tienes alguna duda o quieres reclamar algo puedes contactar con nosotros mandandonos un mensaje</p>
+        <div class="contact">
+            <div class="email">
+                <p>Al correo:</p>
+                <h3>tiendaLibre2025gmail.com</h3>
+            </div>
+            <div class="tel">
+                <p>O al numero:</p>
+                <h3>0-800-4865-235</h3>
+            </div>
+        </div>
+        <h3>Tambien puedes seguirnos en nuestras redes sociales para enterarte de todas las novedades y descuentos!</h3>
+        <div class="social-icons">
+            <a target='_blank' href="https://www.facebook.com/tiendaLibre"><img title='facebook.com/tiendaLibre' src="/img/facebook.png" alt="Facebook"></a>
+            <a target='_blank' href="https://www.instagram.com/tiendaLibre"><img title='instagram.com/tiendaLibre' src="/img/instagram.png" alt="Instagram"></a>
+            <a target='_blank' href="https://www.x.com/tiendaLibre"><img title='x.com/tiendaLibre' src="/img/x.png" alt="Twitter"></a>
+        </div>
+    </div>
+    <div class="section-right">
+        <p>Te dejamos un pequeño formulario para que des una reseña de lo que te parecio la pagina y que cosas piensas que deberiamos mejorar.</p>
+        <p>Nos seria de mucha ayuda si lo completases, muchas gracias :)</p>
+        <form action="">
+            <div class="email">
+                <input required type="email" class="input">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+            <div class='puntuacion'>
+                <label>Puntuacion</label>
+                <div class="rating">
+                    <input value="5" name="rate" id="star5" type="radio">
+                    <label title="Muy buena" for="star5"></label>
+                    <input value="4" name="rate" id="star4" type="radio">
+                    <label title="Buena" for="star4"></label>
+                    <input value="3" name="rate" id="star3" type="radio" checked="">
+                    <label title="Normal" for="star3"></label>
+                    <input value="2" name="rate" id="star2" type="radio">
+                    <label title="Mala" for="star2"></label>
+                    <input value="1" name="rate" id="star1" type="radio">
+                    <label title="Muy mala" for="star1"></label>
+                </div>
+            </div>
+            <div class='comentario'>
+                <label for="comentario">Comentario</label>
+                <textarea name="comentario" id="comentario" cols='100' rows='5' required></textarea>
+            </div>
+            <button class='btn-enviar' type="button">Enviar</button>
+        </form>
+    </div>
+</footer>

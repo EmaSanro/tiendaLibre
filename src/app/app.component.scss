@@ -61,10 +61,214 @@
     height: 2px;
     background: #f3823a;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform .2s ease-out;
 }
 
 #header #navbar ul li a:hover::before{
     transform: scaleX(1);
+    transform-origin: left;
 }
+
+#footer {
+    box-shadow: 0 -1px 5px #555;
+    background: #f3823a;
+    color: rgb(245, 245, 245);
+    display: flex;
+
+    & .section-left, .section-right {
+        flex-basis: 50%;
+    }
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INICIO SECTION-LEFT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#footer .section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#footer .section-left .contact {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer .section-left .social-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FIN SECTION-LEFT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INICIO SECTION-RIGHT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#footer .section-right {
+    padding: 10px;
+}
+
+#footer .section-right form {
+    color: #222;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas: "name score"
+                         "comment comment"
+                         "enviar enviar";
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 20px;
+
+    & textarea {
+        background-color: #ddd;
+        resize: none;
+        outline: none;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+
+        &:focus {
+            outline: 1px solid #222;
+        }
+    }
+}
+
+#footer .section-right form .puntuacion {
+    grid-area: score;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+// ESTILO PARA EL EMAIL INPUT
+.email {
+    position: relative;
+    grid-area: name;
+}
+
+.input {
+    font-size: 16px;
+    color: #222;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #222;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.email label {
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #222;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+// ESTILO PARA LA PUNTUACION
+.rating:not(:checked) {
+    & input {
+        appearance: none;
+    }
+
+    & label {
+        float: right;
+        cursor: pointer;
+        font-size: 25px;
+        color: #666;
+
+        &::before {
+            content: '★';
+        }
+    }
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    grid-area: comment;
+}
+
+.btn-enviar {
+    grid-area: enviar;
+    height: 40px;
+    font-size: 18px;
+    background-color: #aaa;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color .2s ease;
+
+    &:hover {
+        background-color: #555;
+        color: #ccc;
+    }
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FIN SECTION-RIGHT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

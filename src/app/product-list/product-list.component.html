@@ -1,11 +1,49 @@
 <main>
-    @for (product of productos; track product.title) {
-        <article>
-            <img src="{{product.image}}" alt="{{product.title}}">
-            <hr>
-            <h1>{{product.title}}</h1>
-            <p>{{product.description}}</p>
-            <h3>{{product.price}}</h3>
-        </article>
-    }
+    <section class="products">
+        <div class="swiper-wrapper">
+            <h1>Productos de Tecnologia</h1>
+            <swiper-container navigation pagination slides-per-view="4" space-between="20">
+                @for(product of technology; track product.title) {
+                    <swiper-slide>
+                        <img src="{{product.image}}" alt="{{product.title}}">
+                        <h2>{{product.title}}</h2>
+                        <p>{{product.description}}</p>
+                        <h3>${{product.price}}</h3>
+                        <div class="quantity">
+                            <div>
+                                <button (click)='downQuantity(product)'>-</button>
+                                <p>{{product.quantity}}</p>
+                                <button (click)='upQuantity(product)'>+</button>
+                            </div>
+                            <button class='carrito'><img src="img/carrito.png" alt="carrito"></button>
+                        </div>
+                    </swiper-slide>
+                }
+            </swiper-container>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="swiper-wrapper">
+            <h1>Electrodomesticos</h1>
+            <swiper-container navigation pagination slides-per-view="4" space-between="20">
+                @for(product of appliances; track product.title) {
+                    <swiper-slide>
+                        <img src="{{product.image}}" alt="{{product.title}}">
+                        <h2>{{product.title}}</h2>
+                        <p>{{product.description}}</p>
+                        <h3>${{product.price}}</h3>
+                        <div class="quantity">
+                            <div>
+                                <button (click)='downQuantity(product)'>-</button>
+                                <p>{{product.quantity}}</p>
+                                <button (click)='upQuantity(product)'>+</button>
+                            </div>
+                            <button class='carrito'><img src="img/carrito.png" alt="carrito"></button>
+                        </div>
+                    </swiper-slide>
+                }
+            </swiper-container>
+        </div>
+    </section>
 </main>
