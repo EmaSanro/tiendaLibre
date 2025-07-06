@@ -11,26 +11,53 @@
         width: 80px;
         object-fit: contain;
     }
-
-    & #lupa {
-        position: absolute;
-        left: 56%;
-    }
 }
 
-#header #search {
-    width: 30%;
-    font-size: .9rem;
-    height: 35px;
-    padding: 0 10px;
-    border: none;
-    border-radius: 12px;
-    background-color: #eee;
-    outline: none;
+.group {
+  display: flex;
+  line-height: 20px;
+  align-items: center;
+  position: relative;
+  width: 400px;
+}
 
-    &:focus {
-        border: 2px solid #f3823a;
-    }
+.group .input {
+  font-size: 1rem;
+  width: 100%;
+  height: 45px;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #eee;
+  outline: none;
+  color: #555;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.group .input::placeholder {
+  color: #555;
+}
+
+.group .input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.group .input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+  background-color: #c5c5c5;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #555;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
 }
 
 #header #navbar ul{
@@ -144,7 +171,7 @@
     grid-area: name;
 }
 
-.input {
+.email .input {
     font-size: 16px;
     color: #222;
     padding: 10px 10px 10px 5px;
@@ -155,7 +182,7 @@
     background: transparent;
 }
 
-.input:focus {
+.email .input:focus {
     outline: none;
 }
 

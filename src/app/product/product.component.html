@@ -1,0 +1,8 @@
+@if(product) {
+    <div class='details'>
+        <img src="{{product.image}}" alt="{{product.title}}">
+        <h2>{{product.title}}</h2>
+        <p>{{product.description}}</p>
+        <h3>{{product.price | currency }}</h3>
+    </div>
+}

@@ -23,9 +23,7 @@ swiper-container {
 swiper-slide {
     height: 350px;
     display: grid;
-    justify-items: center;
     align-items: center;
-    text-align: center;
     border: 2px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
@@ -46,25 +44,14 @@ swiper-slide {
     }
 }
 
+.details {
+    text-align: center;
+}
+
 .quantity {
     width: 100%;
     display: flex;
     justify-content: space-around;
-
-    & div {
-        display: flex;
-        column-gap: 5px;
-        align-items: center;
-
-        & button {
-            font-size: 20px;
-            border: none;
-            border-radius: 8px;
-            background-color: #aaa;
-            cursor: pointer;
-            width: 2rem;
-        }
-    }
 }
 
 .carrito {

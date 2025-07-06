@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { register } from 'swiper/element/bundle';
+import { SignComponent } from './sign/sign.component';
+import { InputNumberComponent } from './input-number/input-number.component';
+import { ProductComponent } from './product/product.component';
 
 register();
 
@@ -12,6 +15,9 @@ register();
   declarations: [
     AppComponent,
     ProductListComponent,
+    SignComponent,
+    InputNumberComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
