@@ -19,19 +19,23 @@ export class InputNumberComponent  {
         if(this.quantity < this.max) {
             this.quantity++;
             this.quantityChange.emit(this.quantity);
+        } else {
+            this.quantityChange.emit(this.max);
         }
     }
     
     downQuantity(): void {
-        if(this.quantity == 0)
-            return;
-        this.quantity--;
+        if(this.quantity > 0) {
+            this.quantity--;
+            this.quantityChange.emit(this.quantity);
+        }
     }
-
+    
     onlyNumbers(event: KeyboardEvent) : void {
         if(event.keyCode < 48 || event.keyCode > 57) {
             event.preventDefault();
             return;
         }
+        this.quantityChange.emit(this.quantity);
     }
 }

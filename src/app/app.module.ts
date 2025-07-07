@@ -8,6 +8,8 @@ import { register } from 'swiper/element/bundle';
 import { SignComponent } from './sign/sign.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { ProductComponent } from './product/product.component';
+import { CardComponent } from './card/card.component';
+import { FormsModule } from '@angular/forms';
 
 register();
 
@@ -18,10 +20,12 @@ register();
     SignComponent,
     InputNumberComponent,
     ProductComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

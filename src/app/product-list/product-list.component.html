@@ -6,17 +6,7 @@
                 @for(product of products; track product.title) {
                     @if(product.category == 'technology') {
                         <swiper-slide>
-                            <div class='details' [routerLink]="['/products', product.title]">
-                                <img src="{{product.image}}" alt="{{product.title}}">
-                                <h2>{{product.title}}</h2>
-                                <p>{{product.description}}</p>
-                                <h3>{{product.price | currency }}</h3>
-                            </div>
-                            <hr>
-                            <div class="quantity">
-                                <app-input-number [max]="9" [(quantity)]='product.quantity'></app-input-number>
-                                <button class='carrito'><img src="img/carrito.png" alt="carrito"></button>
-                            </div>
+                            <app-card [product]='product'></app-card>
                         </swiper-slide>
                     }
                 }
@@ -31,17 +21,7 @@
                 @for(product of products; track product.title) {
                     @if(product.category == 'appliances') {
                         <swiper-slide>
-                            <div class="details" [routerLink]="['/products', product.title]">
-                                <img src="{{product.image}}" alt="{{product.title}}">
-                                <h2>{{product.title}}</h2>
-                                <p>{{product.description}}</p>
-                                <h3>{{product.price | currency }}</h3>
-                            </div>
-                            <hr>
-                            <div class="quantity">
-                                <app-input-number [max]="9" [(quantity)]="product.quantity"></app-input-number>
-                                <button class='carrito'><img src="img/carrito.png" alt="carrito"></button>
-                            </div>
+                            <app-card [product]='product'></app-card>
                         </swiper-slide>
                     }
                 }
