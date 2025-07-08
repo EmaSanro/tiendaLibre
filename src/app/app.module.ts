@@ -10,6 +10,7 @@ import { InputNumberComponent } from './input-number/input-number.component';
 import { ProductComponent } from './product/product.component';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
+import { SliderComponent } from './slider/slider.component';
 
 register();
 
@@ -21,6 +22,7 @@ register();
     InputNumberComponent,
     ProductComponent,
     CardComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

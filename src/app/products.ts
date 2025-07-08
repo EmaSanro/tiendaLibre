@@ -6,7 +6,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -14,7 +14,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -22,7 +22,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -30,7 +30,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -38,7 +38,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -46,7 +46,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -54,7 +54,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -62,7 +62,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -70,7 +70,7 @@ export const products: Product[] = [
         description : 'Iphone 16 Rosa 256GB 8GB RAM',
         price: 2000000,
         image : 'img/iphone16.webp',
-        category: 'technology',
+        category: 'Technology',
         quantity: 0
     },
     {
@@ -78,7 +78,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
     {
@@ -86,7 +86,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
     {
@@ -94,7 +94,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
     {
@@ -102,7 +102,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
     {
@@ -110,7 +110,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
     {
@@ -118,7 +118,7 @@ export const products: Product[] = [
         description : 'Lavarropas Automatico 8kg',
         price: 999999,
         image : 'img/lavarropa.jpg',
-        category: 'appliances',
+        category: 'Appliances',
         quantity: 0
     },
 ]

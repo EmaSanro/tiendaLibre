@@ -1,31 +1,11 @@
 <main>
-    <section class="products">
-        <div class="swiper-wrapper">
-            <h1>Productos de Tecnologia</h1>
-            <swiper-container navigation pagination slides-per-view="4" space-between="20">
-                @for(product of products; track product.title) {
-                    @if(product.category == 'technology') {
-                        <swiper-slide>
-                            <app-card [product]='product'></app-card>
-                        </swiper-slide>
-                    }
-                }
-            </swiper-container>
-        </div>
-    </section>
+    @for(category of categories; track category) {
+        <section class="products">
+            <div class="swiper-wrapper">
+                <h1>{{ category }}</h1>
+                <app-slider [category]='category'></app-slider>
+            </div>
+        </section>
+    }
 
-    <section class="products">
-        <div class="swiper-wrapper">
-            <h1>Electrodomesticos</h1>
-            <swiper-container navigation pagination slides-per-view="4" space-between="20">
-                @for(product of products; track product.title) {
-                    @if(product.category == 'appliances') {
-                        <swiper-slide>
-                            <app-card [product]='product'></app-card>
-                        </swiper-slide>
-                    }
-                }
-            </swiper-container>
-        </div>
-    </section>
 </main>
