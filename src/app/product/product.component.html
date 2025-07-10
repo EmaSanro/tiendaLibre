@@ -1,8 +1,25 @@
 @if(product) {
-    <div class='details'>
-        <img src="{{product.image}}" alt="{{product.title}}">
-        <h2>{{product.title}}</h2>
-        <p>{{product.description}}</p>
-        <h3>{{product.price | currency }}</h3>
+    <div class="container-product">
+        <div class="container-images">
+            <img id='imgActual' [src]="imagenActual" alt="{{ product.title }}" />
+            <div class="images">
+                @for (image of product.image; track image) {
+                    <img (click)='changeImage(image)' src="{{image}}" alt="{{product.title}}">
+                }
+            </div>
+        </div>
+        <div class='details'>
+            <h2>{{product.title}}</h2>
+            <p>{{product.description}}</p>
+            <h3>{{product.price | currency }}</h3>
+            <div class="quantity">
+                <p>Cantidad</p><app-input-number [max]="9" [(quantity)]="product.quantity"></app-input-number>
+            </div>
+            <div class="purchase-btns">
+                <button type="button">Comprar Ahora</button>
+                <button type="button">Agregar al Carrito</button>
+            </div>
+        </div>
+        
     </div>
 }

@@ -15,6 +15,10 @@ hr {
     align-items: center;
     row-gap: 5px;
     text-align: center;
+
+    & h2 {
+        overflow: hidden;
+    }
 }
 
 .quantity {
