@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+import { CartComponent } from './cart/cart.component';
 
 register();
 
@@ -23,6 +24,7 @@ register();
     ProductComponent,
     CardComponent,
     SliderComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

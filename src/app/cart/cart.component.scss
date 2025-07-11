@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+}
+
+.section-left, .section-right {
+    background-color: #fff;
+    margin: 50px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.section-left {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-left .empty {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    column-gap: 10px;
+}
+
+.section-left a {
+    text-decoration: none;
+    color: #295f7a;
+}
+
+.section-right {
+    padding: 20px 0;
+    flex-basis: 30%;
+
+    & hr {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+    }
+}
+
+.section-right h3 {
+    padding: 0 20px;
+    font-weight: 400;
+}
