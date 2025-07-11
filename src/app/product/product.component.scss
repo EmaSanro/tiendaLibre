@@ -50,7 +50,17 @@
 
     & h3 {
         font-size: 2rem;
+        font-weight: 300;
+    }
+
+    & h2 {
+        max-width: 75%;
         font-weight: 400;
+    }
+
+    & p {
+        max-width: 90%;
+        color: #333;
     }
 }
 
@@ -65,6 +75,38 @@
     }
 }
 
+.purchase-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+
+    & button {
+        width: 150px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-color .3s ease;
+    }
+
+    :first-child {
+        background-color: #f3823a;
+        color: #fff;
+        &:hover {
+            background-color: #d66017;
+        }
+    }
+
+    :last-child {
+        background-color: #ffb98e;
+        color: #ec6009;
+
+        &:hover {
+            background-color: #ffaf7e;    
+        }
+    }
+}
 
 
 

@@ -13,22 +13,27 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 5px;
+    row-gap: 15px;
     text-align: center;
 
     & h2 {
         overflow: hidden;
+        font-weight: 400;
     }
 }
 
 .quantity {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .carrito {
-    width: 50px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
     height: 30px;
     background-color: #f3823a;
     border: none;

@@ -3,7 +3,7 @@ import { Product } from "./Product";
 export const products: Product[] = [
     {
         title: 'Apple Iphone 16 Rosa (256GB) - Distribuidor Autorizado',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
+        description: 'El equipo cuenta con 256GB de memoria interna acompañado de 8GB de memoria RAM. Su camara frontal cuenta con 12Mpx y la trasera principal con 48Mpx. Su metodo de desbloqueo es reconocimiento facial',
         price: 2000000,
         image: [
             'img/iphone16.webp',
