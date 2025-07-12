@@ -1,7 +1,7 @@
 .container {
     display: flex;
 }
-
+// ESTILO PARA LA SECCION IZQUIERDA (PRODUCTOS EN EL CARRITO)
 .section-left, .section-right {
     background-color: #fff;
     margin: 50px;
@@ -9,6 +9,10 @@
 }
 
 .section-left {
+    flex-basis: 70%;
+}
+
+.empty-cart {
     min-height: 150px;
     flex-basis: 70%;
     display: flex;
@@ -16,18 +20,54 @@
     align-items: center;
 }
 
-.section-left .empty {
+.empty-cart .empty {
     display: flex;
     align-items: center;
     font-size: 20px;
     column-gap: 10px;
 }
 
-.section-left a {
+.empty-cart a {
     text-decoration: none;
     color: #295f7a;
 }
 
+
+// ESTILO PARA CADA PRODUCTO DENTRO DEL CARRITO
+
+.product {
+    display: flex;
+    padding: 15px 30px;
+    align-items: center;
+    column-gap: 20px;
+
+    & div {
+        width: 350px;
+        
+        & h3 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: 400;
+        }
+
+        & .delete {
+            border: none;
+            background: transparent;
+            color: #295f7a;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+    }
+
+    & h2 {
+        font-weight: 300;
+    }
+}
+
+
+// ESTILO PARA LA SECCION DERECHA (RESUMEN COMPRA)
 .section-right {
     padding: 20px 0;
     flex-basis: 30%;

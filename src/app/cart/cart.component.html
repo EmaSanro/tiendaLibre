@@ -1,16 +1,29 @@
 <div class="container">
     <section class="section-left">
             @if(prodList.length == 0) {
-                <div class="empty">
-                    <img src="img/carrito-vacio.png" alt="carrito vacio" width='64'>
-                    <p>¡No tienes productos en el carrito!</p>
+                <div class="empty-cart">
+                    <div class="empty">
+                        <img src="img/carrito-vacio.png" alt="carrito vacio" width='64'>
+                        <p>¡No tienes productos en el carrito!</p>
+                    </div>
+                    <a [routerLink]="['/products']">¡Descubre productos!</a>
                 </div>
-                <a [routerLink]="['/products']">¡Descubre productos!</a>
             } @else {
-                @for(product of prodList; track $index) {
-                    <h1>{{product.title}}</h1>
-                }
-            } 
+                <div class='container-products'>
+                    @for(product of prodList; track $index) {
+                        <div class="product">
+                            <img src="{{ product.image[0] }}" alt="{{ product.title }}" width='100'>
+                            <div>
+                                <h3>{{ product.title }}</h3>
+                                <button class="delete">Eliminar</button>
+                            </div>
+                            <app-input-number [max]="9" [(quantity)]="product.quantity"></app-input-number>
+                            <h2>{{ product.price * product.quantity | currency}}</h2>
+                        </div>
+                        <hr>
+                    }
+                </div>
+                } 
     </section>
     <section class="section-right">
         <h3>Resumen de compra</h3>

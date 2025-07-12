@@ -10,6 +10,7 @@ export class ProductCartService {
   private productsList : Product[] = [];
   private cartList : BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   list : Observable<Product[]> = this.cartList.asObservable();
+  
   constructor() {  }
 
   addToCart(product: Product) {
@@ -19,7 +20,6 @@ export class ProductCartService {
     } else {
       item.quantity += product.quantity;
     }
-    console.log(this.productsList);
     this.cartList.next(this.productsList);
   }
 }
