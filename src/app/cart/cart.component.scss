@@ -5,11 +5,11 @@
 .section-left, .section-right {
     background-color: #fff;
     margin: 50px;
-    height: 150px;
     border-radius: 5px;
 }
 
 .section-left {
+    min-height: 150px;
     flex-basis: 70%;
     display: flex;
     justify-content: space-around;
@@ -31,6 +31,8 @@
 .section-right {
     padding: 20px 0;
     flex-basis: 30%;
+    min-height: 150px;
+    height: fit-content;
 
     & hr {
         margin-top: 10px;
@@ -41,4 +43,15 @@
 .section-right h3 {
     padding: 0 20px;
     font-weight: 400;
+}
+
+.section-right .resume, .section-right .total {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 30px;
+}
+
+.section-right .total {
+    align-items: center;
+    margin-top: 50px;
 }

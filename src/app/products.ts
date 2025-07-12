@@ -12,7 +12,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 15',
@@ -25,7 +25,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 14',
@@ -38,7 +38,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 13',
@@ -51,7 +51,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 12',
@@ -64,7 +64,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 11',
@@ -77,7 +77,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone X',
@@ -90,7 +90,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 8',
@@ -103,7 +103,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Iphone 7',
@@ -116,7 +116,7 @@ export const products: Product[] = [
             'img/iphone16camara.webp',
         ],
         category: 'Tecnologia',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Lavarropas Automatico',
@@ -128,7 +128,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Lavarropas SemiAutomatico',
@@ -140,7 +140,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'LavaSecarropas',
@@ -152,7 +152,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Lavarropas',
@@ -164,7 +164,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Lavarropas samsung',
@@ -176,7 +176,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
     {
         title: 'Secarropas',
@@ -188,7 +188,7 @@ export const products: Product[] = [
             'img/lavarropa.jpg'
         ],
         category: 'Electrodomesticos',
-        quantity: 0,
+        quantity: 1,
     },
 ];
 

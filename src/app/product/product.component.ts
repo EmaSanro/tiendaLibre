@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../Product';
 import { products } from '../products';
+import { ProductCartService } from '../product-cart.service';
 
 @Component({
   selector: 'app-product',
@@ -10,7 +11,7 @@ import { products } from '../products';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private cart : ProductCartService) {}
 
   product !: Product | undefined;
   imagenActual !: string | undefined;
@@ -34,9 +35,10 @@ export class ProductComponent implements OnInit {
         image.classList.toggle('active');
       }
     })
-    
-    
-    
-    
   }
+
+  addToCart(product: Product) {
+    this.cart.addToCart(product);
+  }
+  
 }
