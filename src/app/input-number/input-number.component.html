@@ -1,5 +1,5 @@
 <div>
-    <button (click)='downQuantity()'>-</button>
+    <button [disabled]='isDisabled' (click)='downQuantity()'>-</button>
     <input type='text' (keyup)="onlyNumbers($event)" [(ngModel)]='quantity' />
     <button (click)='upQuantity()'>+</button>
 </div>

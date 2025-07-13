@@ -6,28 +6,44 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './input-number.component.html',
   styleUrl: './input-number.component.scss'
 })
-export class InputNumberComponent  {
-
-    @Input() max!: number;
+export class InputNumberComponent {
 
     @Input() quantity!: number;
 
+    @Input() totalProds !: number;
+
+    @Input() totalValue !: number;
+
+    @Input() price !: number;
+
+    @Input() isDisabled : boolean = true;
+
     @Output() quantityChange : EventEmitter<number> = new EventEmitter<number>();
 
+    @Output() totalProdsChange : EventEmitter<number> = new EventEmitter<number>();
+
+    @Output() totalValueChange : EventEmitter<number> = new EventEmitter<number>();
 
     upQuantity(): void {
-        if(this.quantity < this.max) {
-            this.quantity++;
-            this.quantityChange.emit(this.quantity);
-        } else {
-            this.quantityChange.emit(this.max);
-        }
+        this.isDisabled = false;
+        this.quantity++;
+        this.totalProds++;
+        this.totalValue += this.price;
+        this.quantityChange.emit(this.quantity);
+        this.totalProdsChange.emit(this.totalProds);
+        this.totalValueChange.emit(this.totalValue);
     }
     
     downQuantity(): void {
-        if(this.quantity > 0) {
+        if(this.quantity > 1) {
             this.quantity--;
+            this.totalProds--;
+            this.totalValue -= this.price;
             this.quantityChange.emit(this.quantity);
+            this.totalProdsChange.emit(this.totalProds);
+            this.totalValueChange.emit(this.totalValue);
+        } else {
+            this.isDisabled = true;
         }
     }
     
@@ -37,5 +53,6 @@ export class InputNumberComponent  {
             return;
         }
         this.quantityChange.emit(this.quantity);
+        this.totalProdsChange.emit(this.totalProds);
     }
 }

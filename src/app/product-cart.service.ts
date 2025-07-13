@@ -10,7 +10,7 @@ export class ProductCartService {
   private productsList : Product[] = [];
   private cartList : BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   list : Observable<Product[]> = this.cartList.asObservable();
-  
+
   constructor() {  }
 
   addToCart(product: Product) {

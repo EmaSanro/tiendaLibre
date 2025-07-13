@@ -17,7 +17,7 @@
                                 <h3>{{ product.title }}</h3>
                                 <button class="delete">Eliminar</button>
                             </div>
-                            <app-input-number [max]="9" [(quantity)]="product.quantity"></app-input-number>
+                            <app-input-number [(totalProds)]='this.quantityProds' [(totalValue)]='this.valueProds' [price]='product.price' [(quantity)]="product.quantity"></app-input-number>
                             <h2>{{ product.price * product.quantity | currency}}</h2>
                         </div>
                         <hr>
@@ -30,12 +30,12 @@
         <hr>
         @if(prodList.length > 0) {
             <div class='resume'>
-                <p>Productos({{quantityProds}})</p>
-                <p>{{sumProds | currency}}</p>
+                <p>Productos({{this.quantityProds}})</p>
+                <p>{{this.valueProds | currency}}</p>
             </div>
             <div class="total">
                 <h2>Total</h2>
-                <p>{{sumProds | currency}}</p>
+                <p>{{this.valueProds | currency}}</p>
             </div>
         }
     </section>
