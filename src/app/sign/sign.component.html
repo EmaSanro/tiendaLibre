@@ -1,0 +1,45 @@
+<div class="container-form">
+    <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+        <h1>Registrarse</h1>
+        <div class="data-container">
+            <label for="username">Username*</label>
+            <input class='control' id='username' name='username' type="text" formControlName='username'
+             [class.invalid]='getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)'/>
+             @if(getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)) {
+                <p>El username es requerido*</p>
+             }
+        </div>
+        <div class="data-container">
+            <label for="email">Email*</label>
+            <input class='control' id='email' name='email' type='email' formControlName='email' 
+            [class.invalid]='getEmail()?.invalid && ((getEmail()?.touched || getEmail()?.dirty))' />
+            @if(getEmail()?.hasError('required') && ((getEmail()?.touched || getEmail()?.dirty))) {
+                <p>El email es requerido*</p>
+            }
+            @if(getEmail()?.hasError('email') && ((getEmail()?.touched || getEmail()?.dirty))) {
+                <p>El formato no es valido</p>
+            }
+        </div>
+        <div class="data-container">
+            <label for="password">Password*</label>
+            <input class='control' id='password' name='password' type='password' formControlName='password' 
+            [class.invalid]='getPassword()?.invalid && ((getPassword()?.touched || getPassword()?.dirty))'/>
+            @if(getPassword()?.hasError('required') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                <p>La contraseña es requerida*</p>
+            }
+            @if(getPassword()?.hasError('minlength') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                <p>La contraseña debe tener minimo 8 caracteres*</p>
+            }
+        </div>
+        <div class="data-container">
+            <label for="confPassword">Confirm Password:</label>
+            <input class='control' id='confPassword' name='confPassword' type='password' formControlName='confirmPassword' />
+            @if(formSignUp.hasError('mismatch')) {
+                <p>Las contraseñas no coinciden</p>
+            }
+        </div>
+        <button type='submit' [disabled]="!formSignUp.valid">Registrarse</button>
+    </form>
+</div>
+
+<h2>{{formSignUp.status}}</h2>

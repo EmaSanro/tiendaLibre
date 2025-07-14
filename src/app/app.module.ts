@@ -9,7 +9,7 @@ import { SignComponent } from './sign/sign.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { ProductComponent } from './product/product.component';
 import { CardComponent } from './card/card.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
 import { CartComponent } from './cart/cart.component';
 
@@ -29,7 +29,8 @@ register();
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

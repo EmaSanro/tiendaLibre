@@ -1,0 +1,41 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+form .data-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+
+    & input {
+        width: 75%;
+        height: 30px;
+        padding: 0 5px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+
+        &:focus {
+            border: 1px solid #295f7a;
+        }
+    }
+}
+
+
+// ESTILO PARA INPUTS INVALIDOS
+.data-container p {
+    color: red;
+}
+
+.data-container .control.invalid {
+    border: 1px solid red;
+}
