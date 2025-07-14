@@ -16,7 +16,7 @@ export class InputNumberComponent {
 
     @Input() price !: number;
 
-    @Input() isDisabled : boolean = true;
+    @Input() isDisabled : boolean = false;
 
     @Output() quantityChange : EventEmitter<number> = new EventEmitter<number>();
 
@@ -53,6 +53,5 @@ export class InputNumberComponent {
             return;
         }
         this.quantityChange.emit(this.quantity);
-        this.totalProdsChange.emit(this.totalProds);
     }
 }

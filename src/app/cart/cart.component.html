@@ -15,7 +15,7 @@
                             <img src="{{ product.image[0] }}" alt="{{ product.title }}" width='100'>
                             <div>
                                 <h3>{{ product.title }}</h3>
-                                <button class="delete">Eliminar</button>
+                                <button (click)="removeToCart(product)" class="delete">Eliminar</button>
                             </div>
                             <app-input-number [(totalProds)]='this.quantityProds' [(totalValue)]='this.valueProds' [price]='product.price' [(quantity)]="product.quantity"></app-input-number>
                             <h2>{{ product.price * product.quantity | currency}}</h2>
@@ -37,6 +37,7 @@
                 <h2>Total</h2>
                 <p>{{this.valueProds | currency}}</p>
             </div>
+            <button>Continuar compra</button>
         }
     </section>
 </div>

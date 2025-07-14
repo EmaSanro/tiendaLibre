@@ -69,7 +69,7 @@
 
 // ESTILO PARA LA SECCION DERECHA (RESUMEN COMPRA)
 .section-right {
-    padding: 20px 0;
+    padding: 20px;
     flex-basis: 30%;
     min-height: 150px;
     height: fit-content;
@@ -88,10 +88,30 @@
 .section-right .resume, .section-right .total {
     display: flex;
     justify-content: space-between;
-    margin: 15px 30px;
+    margin: 15px 10px;
 }
 
 .section-right .total {
     align-items: center;
     margin-top: 50px;
+}
+
+.section-right button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #f3823a;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .2s ease;
+
+    &:hover {
+        background-color: #e77833;
+    }
+
+    &:active {
+        opacity: .8;
+    }
 }

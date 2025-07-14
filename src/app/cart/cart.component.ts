@@ -11,8 +11,8 @@ import { ProductCartService } from '../product-cart.service';
 export class CartComponent implements OnInit {
 
   prodList!: Product[];
-  quantityProds : number = 0;
-  valueProds : number = 0;
+  quantityProds !: number;
+  valueProds !: number;
 
   constructor(private cartService : ProductCartService) { }
 
@@ -23,6 +23,7 @@ export class CartComponent implements OnInit {
   }
 
   totalProds() {
+    this.quantityProds = 0;
     for(let prod of this.prodList) {
       this.quantityProds += prod.quantity;
     }
@@ -31,9 +32,17 @@ export class CartComponent implements OnInit {
   }
 
   totalValue() : number {
+    this.valueProds = 0;
     for(let prod of this.prodList) {
       this.valueProds += prod.price * prod.quantity;
     }
     return this.valueProds;
+  }
+
+  removeToCart(product: Product) {
+    this.cartService.removeToCart(product);
+    console.log(this.cartService.list)
+    this.totalProds();
+    this.totalValue();
   }
 }

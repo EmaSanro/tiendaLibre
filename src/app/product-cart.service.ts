@@ -22,4 +22,13 @@ export class ProductCartService {
     }
     this.cartList.next(this.productsList);
   }
+
+  removeToCart(product: Product) {
+    let item = this.productsList.find(p => p.title == product.title);
+    if(item) {
+      console.log(this.productsList);
+      this.productsList.splice(this.productsList.indexOf(item), 1);
+      console.log(this.productsList);
+    }
+  }
 }
