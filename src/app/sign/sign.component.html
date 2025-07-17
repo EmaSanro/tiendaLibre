@@ -1,45 +1,91 @@
-<div class="container-form">
-    <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
-        <h1>Registrarse</h1>
-        <div class="data-container">
-            <label for="username">Username*</label>
-            <input class='control' id='username' name='username' type="text" formControlName='username'
-             [class.invalid]='getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)'/>
-             @if(getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)) {
-                <p>El username es requerido*</p>
-             }
-        </div>
-        <div class="data-container">
-            <label for="email">Email*</label>
-            <input class='control' id='email' name='email' type='email' formControlName='email' 
-            [class.invalid]='getEmail()?.invalid && ((getEmail()?.touched || getEmail()?.dirty))' />
-            @if(getEmail()?.hasError('required') && ((getEmail()?.touched || getEmail()?.dirty))) {
-                <p>El email es requerido*</p>
-            }
-            @if(getEmail()?.hasError('email') && ((getEmail()?.touched || getEmail()?.dirty))) {
-                <p>El formato no es valido</p>
-            }
-        </div>
-        <div class="data-container">
-            <label for="password">Password*</label>
-            <input class='control' id='password' name='password' type='password' formControlName='password' 
-            [class.invalid]='getPassword()?.invalid && ((getPassword()?.touched || getPassword()?.dirty))'/>
-            @if(getPassword()?.hasError('required') && ((getPassword()?.touched || getPassword()?.dirty))) {
-                <p>La contraseña es requerida*</p>
-            }
-            @if(getPassword()?.hasError('minlength') && ((getPassword()?.touched || getPassword()?.dirty))) {
-                <p>La contraseña debe tener minimo 8 caracteres*</p>
-            }
-        </div>
-        <div class="data-container">
-            <label for="confPassword">Confirm Password:</label>
-            <input class='control' id='confPassword' name='confPassword' type='password' formControlName='confirmPassword' />
-            @if(formSignUp.hasError('mismatch')) {
-                <p>Las contraseñas no coinciden</p>
-            }
-        </div>
-        <button type='submit' [disabled]="!formSignUp.valid">Registrarse</button>
-    </form>
-</div>
+<div class="container">
+    <div class="container-sections hide">
+        <section class="left">
+            <h1>Bienvenido!</h1>
+            <h3>Completa el formulario de la derecha para registrarte.</h3>
+            <p>En caso de que ya tengas una cuenta, puedes iniciar sesion mediante el boton de abajo</p>
+            <button type="button">Iniciar Sesion</button>
+        </section>
+        <section class="right">
+            <h1>Registrarse</h1>
+            <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+                <div class="data-container">
+                    <label for="username">Username*</label>
+                    <input class='control' id='username' name='username' type="text" placeholder='username123...' formControlName='username'
+                     [class.invalid]='getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)'/>
+                     @if(getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)) {
+                        <p>El username es requerido*</p>
+                     }
+                </div>
+                <div class="data-container">
+                    <label for="email">Email*</label>
+                    <input class='control' id='email' name='email' type='email' placeholder='user.email@example.com...' formControlName='email' 
+                    [class.invalid]='getEmail()?.invalid && ((getEmail()?.touched || getEmail()?.dirty))' />
+                    @if(getEmail()?.hasError('required') && ((getEmail()?.touched || getEmail()?.dirty))) {
+                        <p>El email es requerido*</p>
+                    }
+                    @if(getEmail()?.hasError('email') && ((getEmail()?.touched || getEmail()?.dirty))) {
+                        <p>El formato no es valido</p>
+                    }
+                </div>
+                <div class="data-container">
+                    <label for="password">Password*</label>
+                    <input class='control' id='password' name='password' type='password' placeholder='pass1234...' formControlName='password' 
+                    [class.invalid]='getPassword()?.invalid && ((getPassword()?.touched || getPassword()?.dirty))'/>
+                    @if(getPassword()?.hasError('required') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                        <p>La contraseña es requerida*</p>
+                    }
+                    @if(getPassword()?.hasError('minlength') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                        <p>La contraseña debe tener minimo 8 caracteres*</p>
+                    }
+                </div>
+                <div class="data-container">
+                    <label for="confPassword">Confirm Password:</label>
+                    <input class='control' id='confPassword' name='confPassword' type='password' placeholder='pass1234...' formControlName='confirmPassword' />
+                    @if(formSignUp.hasError('mismatch')) {
+                        <p>Las contraseñas no coinciden</p>
+                    }
+                </div>
+                <button type='submit' [disabled]="!formSignUp.valid">Registrarse</button>
+            </form>
+        </section>
+    </div>
 
-<h2>{{formSignUp.status}}</h2>
+
+
+
+
+    <div class="container-sections">
+        <section class="left">
+            <h1>Bienvenido de nuevo!</h1>
+            <h3>Inicia sesion con el formulario de la derecha.</h3>
+            <p>Si no tienes una cuenta, registrate ahora con el boton de abajo</p>
+            <button type="button">Registrarse</button>
+        </section>
+        <section class="right">
+            <h1>Iniciar Sesion</h1>
+            <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+                <div class="data-container">
+                    <label for="username">Username*</label>
+                    <input class='control' id='username' name='username' type="text" placeholder='username123...' formControlName='username'
+                     [class.invalid]='getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)'/>
+                     @if(getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)) {
+                        <p>El username es requerido*</p>
+                     }
+                </div>
+                <div class="data-container">
+                    <label for="password">Password*</label>
+                    <input class='control' id='password' name='password' type='password' placeholder='pass1234...' formControlName='password' 
+                    [class.invalid]='getPassword()?.invalid && ((getPassword()?.touched || getPassword()?.dirty))'/>
+                    @if(getPassword()?.hasError('required') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                        <p>La contraseña es requerida*</p>
+                    }
+                    @if(getPassword()?.hasError('minlength') && ((getPassword()?.touched || getPassword()?.dirty))) {
+                        <p>La contraseña debe tener minimo 8 caracteres*</p>
+                    }
+                </div>
+                <button type='submit' [disabled]="!formSignUp.valid">Iniciar Sesion</button>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,41 +1,149 @@
-.container-form {
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container-sections {
+    display: flex;
+    width: 75%;
+    min-height: 400px;
+    justify-content: center;
+}
+
+// SECCION IZQUIERDA
+
+.container-sections .left {
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    background-color: #ffa167;
+    color:white;
+    padding: 0 30px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    text-align: center;
 }
 
-form {
-    display: flex;
-    width: 300px;
-    flex-direction: column;
-    row-gap: 10px;
+.container-sections .left h1 {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-form .data-container {
+.container-sections .left h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.container-sections .left p {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.container-sections .left button {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #d36d2e;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px #333;
+    color: #fff;
+
+    &:hover {
+        background-color: #f3843e;
+    }
+
+    &:active {
+        transform: translateY(2px);
+        box-shadow: 0 0 #333;
+    }
+}
+
+// SECCION DERECHA
+.container-sections .right {
+    width: 450px;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    row-gap: 2px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.container-sections .right h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.container-sections .right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.container-sections .right form .data-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 
     & input {
-        width: 75%;
         height: 30px;
         padding: 0 5px;
         border-radius: 8px;
         border: none;
         outline: none;
-
+    
         &:focus {
             border: 1px solid #295f7a;
         }
     }
 }
 
+.container-sections .right form button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #295f7a;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    &:hover {
+        background-color: #174861;
+        color: #eee;
+    }
+}
+
+.container-sections .right form button:disabled {
+    cursor: default;
+    background-color: #5a9cbd;
+    color: #ccc;
+}
+
+
+.hide {
+    position: absolute;
+    top: -300%;
+}
 
 // ESTILO PARA INPUTS INVALIDOS
-.data-container p {
+.container-sections .right .data-container p {
     color: red;
 }
 
-.data-container .control.invalid {
+.container-sections .right .data-container .control.invalid {
     border: 1px solid red;
 }

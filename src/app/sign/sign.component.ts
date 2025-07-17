@@ -8,6 +8,13 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators} 
   styleUrl: './sign.component.scss'
 })
 export class SignComponent {
+  userData = {
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  };
+
   formSignUp = new FormGroup({
     username : new FormControl('', [Validators.required]),
     email : new FormControl('', [Validators.required, Validators.email]),
@@ -39,6 +46,14 @@ export class SignComponent {
   }
 
   onSubmit() {
-    console.log(this.formSignUp.value);
+    this.userData.username = this.formSignUp.get('username')?.value || '';
+    this.userData.email = this.formSignUp.get('email')?.value || '';
+    this.userData.password = this.formSignUp.get('password')?.value || '';
+    this.userData.confirmPassword = this.formSignUp.get('confirmPassword')?.value || '';
+    sessionStorage.setItem('userData', JSON.stringify(this.userData));
+    
+    // setTimeout(() => {
+    //   window.location.href = '/';
+    // }, 1000);
   }
 }

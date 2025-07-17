@@ -26,9 +26,8 @@ export class ProductCartService {
   removeToCart(product: Product) {
     let item = this.productsList.find(p => p.title == product.title);
     if(item) {
-      console.log(this.productsList);
+      item.quantity = 1;
       this.productsList.splice(this.productsList.indexOf(item), 1);
-      console.log(this.productsList);
     }
   }
 }
