@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../Product';
-import { products } from '../products';
+// import { products } from '../products';
 import { ProductCartService } from '../product-cart.service';
+import { ProductsDataService } from '../products-data.service';
 
 @Component({
   selector: 'app-product',
@@ -11,16 +12,18 @@ import { ProductCartService } from '../product-cart.service';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private cart : ProductCartService) {}
+  constructor(private route: ActivatedRoute, private cart : ProductCartService, private productData : ProductsDataService) {}
 
-  product !: Product | undefined;
-  imagenActual !: string | undefined;
+  product !: Product;
+  imagenActual !: string;
   
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.product = products.find(product => {return product.title === params.get('productId')})
+     this.productData.getProductById(params.get('productId') || '').subscribe(product => {
+      this.product = product;
+      this.imagenActual = this.product.images.image1;
+      });
     })
-    this.imagenActual = this.product?.image[0];
   }
 
   changeImage(image: string) {

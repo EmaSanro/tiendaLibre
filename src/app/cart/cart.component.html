@@ -12,7 +12,7 @@
                 <div class='container-products'>
                     @for(product of prodList; track $index) {
                         <div class="product">
-                            <img src="{{ product.image[0] }}" alt="{{ product.title }}" width='100'>
+                            <img src="{{ product.images.image1 }}" alt="{{ product.title }}" width='100'>
                             <div>
                                 <h3>{{ product.title }}</h3>
                                 <button (click)="removeToCart(product)" class="delete">Eliminar</button>

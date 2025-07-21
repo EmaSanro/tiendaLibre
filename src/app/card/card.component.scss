@@ -1,9 +1,6 @@
 h2 {
     height: 70px;
 }
-img {
-    width: 100px;
-}
 
 hr {
     margin: 10px 0;
@@ -19,6 +16,11 @@ hr {
     & h2 {
         overflow: hidden;
         font-weight: 400;
+    }
+
+    & img {
+        height: 150px;
+        object-fit: contain;
     }
 }
 

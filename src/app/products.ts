@@ -1,195 +1,208 @@
-import { Product } from "./Product";
+// import { Product } from "./Product";
 
-export const products: Product[] = [
-    {
-        title: 'Apple Iphone 16 Rosa (256GB) - Distribuidor Autorizado',
-        description: 'El equipo cuenta con 256GB de memoria interna acompañado de 8GB de memoria RAM. Su camara frontal cuenta con 12Mpx y la trasera principal con 48Mpx. Su metodo de desbloqueo es reconocimiento facial',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 15',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 14',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 13',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 12',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 11',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone X',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 8',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Iphone 7',
-        description: 'Iphone 16 Rosa 256GB 8GB RAM',
-        price: 2000000,
-        image: [
-            'img/iphone16.webp',
-            'img/iphone16lado.webp',
-            'img/iphone16frente.webp',
-            'img/iphone16camara.webp',
-        ],
-        category: 'Tecnologia',
-        quantity: 1,
-    },
-    {
-        title: 'Lavarropas Automatico',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-    {
-        title: 'Lavarropas SemiAutomatico',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-    {
-        title: 'LavaSecarropas',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-    {
-        title: 'Lavarropas',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-    {
-        title: 'Lavarropas samsung',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-    {
-        title: 'Secarropas',
-        description: 'Lavarropas Automatico 8kg',
-        price: 999999,
-        image: [
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg', 
-            'img/lavarropa.jpg'
-        ],
-        category: 'Electrodomesticos',
-        quantity: 1,
-    },
-];
-
-    
+// export const products: Product[] = [
+//     {
+//         "title": "Apple Iphone 16 Rosa (256GB) - Distribuidor Autorizado",
+//         "description": "El equipo cuenta con 256GB de memoria interna acompañado de 8GB de memoria RAM. Su camara frontal cuenta con 12Mpx y la trasera principal con 48Mpx. Su metodo de desbloqueo es reconocimiento facial",
+//         "price": 2000000,
+//         "images": {
+//             "image1": "img/iphone16.webp",
+//             "image2": "img/iphone16lado.webp",
+//             "image3": "img/iphone16frente.webp",
+//             "image4": "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "1",
+//     },
+//     {
+//         "title": "Iphone 15",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "2",
+//     },
+//     {
+//         "title": "Iphone 14",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "3",
+//     },
+//     {
+//         "title": "Iphone 13",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "4",
+//     },
+//     {
+//         "title": "Iphone 12",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "5",
+//     },
+//     {
+//         "title": "Iphone 11",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "6",
+//     },
+//     {
+//         "title": "Iphone X",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "7",
+//     },
+//     {
+//         "title": "Iphone 8",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image1" : "img/iphone16.webp",
+//             "image2" : "img/iphone16lado.webp",
+//             "image3" : "img/iphone16frente.webp",
+//             "image4" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "8",
+//     },
+//     {
+//         "title": "Iphone 7",
+//         "description": "Iphone 16 Rosa 256GB 8GB RAM",
+//         "price": 2000000,
+//         "images": {
+//             "image" : "img/iphone16.webp",
+//             "image1" : "img/iphone16lado.webp",
+//             "image2" : "img/iphone16frente.webp",
+//             "image3" : "img/iphone16camara.webp",
+//         },
+//         "category": "Tecnologia",
+//         "quantity": 1,
+//         "id" : "9",
+//     },
+//     {
+//         "title": "Lavarropas Automatico",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "10",
+//     },
+//     {
+//         "title": "Lavarropas SemiAutomatico",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "11",
+//     },
+//     {
+//         "title": "LavaSecarropas",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "12",
+//     },
+//     {
+//         "title": "Lavarropas",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "13",
+//     },
+//     {
+//         "title": "Lavarropas samsung",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "14",
+//     },
+//     {
+//         "title": "Secarropas",
+//         "description": "Lavarropas Automatico 8kg",
+//         "price": 999999,
+//         "images": {
+//             "image1" : "img/lavarropa.jpg", 
+//             "image2" : "img/lavarropa.jpg", 
+//             "image3" : "img/lavarropa.jpg"
+//         },
+//         "category": "Electrodomesticos",
+//         "quantity": 1,
+//         "id" : "15",
+//     },
+// ];    

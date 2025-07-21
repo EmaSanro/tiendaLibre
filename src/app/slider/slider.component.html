@@ -1,5 +1,5 @@
 <swiper-container navigation pagination slides-per-view="4" space-between="20">
-    @for(product of products; track product.title) {
+    @for(product of products; track product.id) {
         @if(product.category == category) {
             <swiper-slide>
                 <app-card [product]='product'></app-card>

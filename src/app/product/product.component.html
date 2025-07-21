@@ -1,11 +1,12 @@
 @if(product) {
     <div class="container-product">
         <div class="container-images">
-            <img id='imgActual' [src]="imagenActual" alt="{{ product.title }}" />
+            <img id='imgActual' src="{{imagenActual}}" alt="{{ product.title }}" />
             <div class="images">
-                @for (image of product.image; track image) {
-                    <img (click)='changeImage(image)' src="{{image}}" alt="{{product.title}}">
-                }
+                <img (click)='changeImage(product.images.image1)' src="{{product.images.image1}}" alt="{{product.title}}">
+                <img (click)='changeImage(product.images.image2)' src="{{product.images.image2}}" alt="{{product.title}}">
+                <img (click)='changeImage(product.images.image3)' src="{{product.images.image3}}" alt="{{product.title}}">
+                <img (click)='changeImage(product.images.image4)' src="{{product.images.image4}}" alt="{{product.title}}">
             </div>
         </div>
         <div class='details'>

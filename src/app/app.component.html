@@ -9,9 +9,17 @@
     <nav id='navbar'>
         <ul>
             <li><a [routerLink]="['/']">Home</a></li>
-            <li><a [routerLink]="['/cart']">Cart</a></li>
+            @if(isLoggedIn === 'true') {
+                <li><a [routerLink]="['/cart']">Cart</a></li>
+            } @else {
+                <li><a [routerLink]="['/sign']">Cart</a></li>
+             }
             <li><a href="/about">About</a></li>
-            <li><a [routerLink]="['/sign']">Sign</a></li>
+            @if(isLoggedIn === 'true') {
+                <li><a (click)='closeSession()'>Log Out</a></li>
+            } @else {
+                <li><a [routerLink]="['/sign']">Sign</a></li>
+            }
         </ul>
     </nav>
 </header>

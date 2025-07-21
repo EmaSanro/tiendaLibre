@@ -1,5 +1,5 @@
-<div class='details' [routerLink]="['/products', product.title]">
-    <img src="{{product.image[0]}}" alt="{{product.title}}">
+<div class='details' [routerLink]="['/products', product.id]">
+    <img src="{{product.images.image1}}" alt="{{product.title}}">
     <h2>{{product.title}}</h2>
     <h3>{{product.price | currency }}</h3>
 </div>

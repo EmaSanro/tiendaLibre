@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { products } from '../products';
+import { ProductsDataService } from '../products-data.service';
+import { Product } from '../Product';
 
 @Component({
   selector: 'app-slider',
@@ -8,10 +9,21 @@ import { products } from '../products';
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })
-export class SliderComponent {
-
-  products = products;
-
+export class SliderComponent implements OnInit {
+  
   @Input() category !: string;
+  
+  products !: Product[];
+
+  constructor(private data : ProductsDataService) {
+
+  }
+
+  ngOnInit(): void {
+    this.data.getProducts().subscribe((products) => {
+      this.products = products;
+    })
+  }
+
 
 }

@@ -1,14 +1,14 @@
 <div class="container">
-    <div class="container-sections hide">
+    <div id='formSignUp' class="container-sections">
         <section class="left">
             <h1>Bienvenido!</h1>
             <h3>Completa el formulario de la derecha para registrarte.</h3>
             <p>En caso de que ya tengas una cuenta, puedes iniciar sesion mediante el boton de abajo</p>
-            <button type="button">Iniciar Sesion</button>
+            <button (click)='changeForm()' type="button">Iniciar Sesion</button>
         </section>
         <section class="right">
             <h1>Registrarse</h1>
-            <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+            <form [formGroup]="formSignUp" (ngSubmit)="onSignUp()">
                 <div class="data-container">
                     <label for="username">Username*</label>
                     <input class='control' id='username' name='username' type="text" placeholder='username123...' formControlName='username'
@@ -55,19 +55,19 @@
 
 
 
-    <div class="container-sections">
+    <div id='formSignIn' class="container-sections hide">
         <section class="left">
             <h1>Bienvenido de nuevo!</h1>
             <h3>Inicia sesion con el formulario de la derecha.</h3>
             <p>Si no tienes una cuenta, registrate ahora con el boton de abajo</p>
-            <button type="button">Registrarse</button>
+            <button (click)='changeForm()' type="button">Registrarse</button>
         </section>
         <section class="right">
             <h1>Iniciar Sesion</h1>
-            <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+            <form [formGroup]="formSignIn" (ngSubmit)="onSignIn()">
                 <div class="data-container">
                     <label for="username">Username*</label>
-                    <input class='control' id='username' name='username' type="text" placeholder='username123...' formControlName='username'
+                    <input class='control' name='username' type="text" placeholder='username123...' formControlName='username'
                      [class.invalid]='getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)'/>
                      @if(getUsername()?.invalid && (getUsername()?.dirty || getUsername()?.touched)) {
                         <p>El username es requerido*</p>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="data-container">
                     <label for="password">Password*</label>
-                    <input class='control' id='password' name='password' type='password' placeholder='pass1234...' formControlName='password' 
+                    <input class='control' name='password' type='password' placeholder='pass1234...' formControlName='password' 
                     [class.invalid]='getPassword()?.invalid && ((getPassword()?.touched || getPassword()?.dirty))'/>
                     @if(getPassword()?.hasError('required') && ((getPassword()?.touched || getPassword()?.dirty))) {
                         <p>La contraseña es requerida*</p>
@@ -84,7 +84,7 @@
                         <p>La contraseña debe tener minimo 8 caracteres*</p>
                     }
                 </div>
-                <button type='submit' [disabled]="!formSignUp.valid">Iniciar Sesion</button>
+                <button type='submit' [disabled]="!formSignIn.valid">Iniciar Sesion</button>
             </form>
         </section>
     </div>

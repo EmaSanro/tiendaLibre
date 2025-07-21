@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { products } from '../products';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ProductsDataService } from '../products-data.service';
+import { Product } from '../Product';
 
 @Component({
   selector: 'app-product-list',
@@ -9,23 +10,29 @@ import { products } from '../products';
 })
 
 export class ProductListComponent implements OnInit {
+
+  products : Product[] = [];
+  categories : string[] = [];
+
+  constructor(private productsdata: ProductsDataService) {  }
+  
+  
   ngOnInit(): void {
-    this.repetidos();
+    this.productsdata.getProducts().subscribe(products => {
+      this.products = products;
+    })
+    setTimeout(() => {
+      this.getCategories();
+    }, 1000);
   }
 
-  products = products;
-
-  categories = new Set<string>();
-
-  repetidos() {
-    for(let elem of products) {
-      if(this.categories.has(elem.category)) {
-        continue;
-      } else {
-        this.categories.add(elem.category);
+  getCategories() : void {
+    this.products.forEach(product => {
+      if(!this.categories.includes(product.category)) {
+        this.categories.push(product.category);
       }
-    }
-    return undefined;
+    })
   }
-    
+
+
 }
